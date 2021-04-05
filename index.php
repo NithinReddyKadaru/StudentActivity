@@ -41,7 +41,6 @@ else {
           Purchase
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        	<h1> HEY </h1>
           <a class="dropdown-item" href="mealplan.php">Meal Plan</a>
           <a class="dropdown-item" href="busTickets.php">Bus Tickets</a>
           <a class="dropdown-item" href="textbook.php">Textbooks</a>
