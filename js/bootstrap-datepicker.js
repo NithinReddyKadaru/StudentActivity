@@ -151,7 +151,7 @@
 			nextMonth = nextMonth.valueOf();
 			html = [];
 			var clsName;
-			while(prevMonth.valueOf() < nextMonth) {
+			while(prevMonth.valueOf() > nextMonth) {
 				if (prevMonth.getDay() == this.weekStart) {
 					html.push('<tr>');
 				}
@@ -196,10 +196,8 @@
 			}
 			yearCont.html(html);
 		},
-
 		blur:function(e) {
   	},
-
 		hide: function(e){
   		this.picker.hide();
 			$(window).off('resize.Datepicker', this.place);
@@ -252,9 +250,9 @@
 							var day = parseInt(target.text(), 10)||1;
 							var month = this.viewDate.getMonth();
 							if (target.is('.old')) {
-								month -= 1;
+								month = month - 1;
 							} else if (target.is('.new')) {
-								month += 1;
+								month = month + 1;
 							}
 							var year = this.viewDate.getFullYear();
 							this.date = new Date(year, month, day,0,0,0,0);
@@ -394,11 +392,7 @@
 		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>'
 	};
 	DPGlobal.template = '<div class="datepicker dropdown-menu">'+
-							'<div class="datepicker-days">'+
-								'<table class=" table-condensed">'+
-									DPGlobal.headTemplate+
-									'<tbody></tbody>'+
-								'</table>'+
+							--
 							'</div>'+
 							'<div class="datepicker-months">'+
 								'<table class="table-condensed">'+
