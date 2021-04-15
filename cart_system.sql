@@ -34,9 +34,7 @@ CREATE TABLE `bookmarkevents` (
   `userid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
 -- Dumping data for table `bookmarkevents`
---
 
 INSERT INTO `bookmarkevents` (`id`, `eventid`, `userid`) VALUES
 (6, 5, 1),
