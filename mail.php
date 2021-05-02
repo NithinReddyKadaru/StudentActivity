@@ -18,12 +18,10 @@ class maill {
 			 mail($this->tomailid,$this->subject,$this->message);
 
 			}catch(EPDOException $e)
-             {
-
+             		{
 			 echo $sql . "<br>" . $e->getMessage();
 
 			 }
-
     }
 }
 ?>
